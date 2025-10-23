@@ -61,7 +61,7 @@ $ python UC_report_standardization_ground_generation.py
 ```
 ### Generate **tissue segmentation probability heatmap, tumor phenotype probability heatmap, and pseudotime heatmap**
 
-- Create original macroscopic tissue probability heatmaps for MacroContextNet training. WSIs are first processed by TissueparseNet network to get  tissue segmentation probability heatmap. nference_phenotype_probability.py: create tumor phenotype probability heatmap. Pseudotime_heatmap_process.py:  create tumor pseudotime probability heatmap
+- Create original macroscopic tissue probability heatmaps for MacroContextNet training. WSIs are first processed by TissueparseNet network to get  tissue segmentation probability heatmap. inference_phenotype_probability.py: create tumor phenotype probability heatmap. Pseudotime_heatmap_process.py:  create tumor pseudotime probability heatmap
 
 ``` shell
   $ cd ./Data_prepare
