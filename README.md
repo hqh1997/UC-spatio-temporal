@@ -59,14 +59,15 @@ structured pathology reports are derived from structured ground-truth data (e.g.
 $ cd ./Data_process
 $ python UC_report_standardization_ground_generation.py
 ```
-### Generate **local and global pathological knowledge-guided patch representation**
+### Generate **tissue segmentation probability heatmap, tumor phenotype probability heatmap, and pseudotime heatmap**
 
-- Create original macroscopic tissue probability heatmaps for MacroContextNet training. WSIs are first processed by UCSparseNet network to get  local  probability heatmaps, Global knowledge-guided patch representation: create global probability heatmaps. 
+- Create original macroscopic tissue probability heatmaps for MacroContextNet training. WSIs are first processed by TissueparseNet network to get  tissue segmentation probability heatmap. nference_phenotype_probability.py: create tumor phenotype probability heatmap. Pseudotime_heatmap_process.py:  create tumor pseudotime probability heatmap
 
 ``` shell
   $ cd ./Data_prepare
   $ python  TissueSparseNet_inference.py
-  $ python  inference_phenotype_probability.py 
+  $ python  inference_phenotype_probability.py
+  $ python  Pseudotime_heatmap_process.py
 ```
 
 * To cut the empty area of combined  tissue probability heatmaps and get square input for MacroContextNet training
